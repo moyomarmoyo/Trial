@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-box">MO<br>YO</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="profile.html" class="nav-item">Our Profile</a>
+        <a href="portfolio.html" class="nav-item">Portfolio</a>
+        <a href="#message" class="nav-item nav-cta">Message Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Moyomarmoyo Corps</p>
+      <h1 class="hero-title">Hi <span id="userName" class="hero-name">there</span>,<br>Welcome To Website</h1>
+      <p class="hero-sub">Ini adalah website latihan pertama</p>
+      <div class="hero-actions">
+        <a href="profile.html" class="btn btn-primary">Explore More</a>
+        <a href="#message" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-badge">Est. 2026</div>
+        <div class="hero-card-stat"><span>150+</span>Clients</div>
+        <div class="hero-card-stat"><span>3</span>Cities</div>
+        <div class="hero-card-stat"><span>98%</span>Satisfaction</div>
+      </div>
+    </div>
+    <div class="hero-dimension">1366×578</div>
+  </section>
+
+  <!-- HEADQUARTER SECTION -->
+  <section class="hq-section" id="headquarters">
+    <div class="container">
+      <h2 class="section-title">Our Headquarter</h2>
+      <p class="section-subtitle">We operate from three major cities across Indonesia</p>
+      <div class="hq-grid">
+        <div class="hq-card">
+          <div class="hq-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555899434-94d1368aa7af?w=300&q=80" alt="Jakarta" />
+          </div>
+          <h3>Jakarta</h3>
+          <p>Jl. Sudirman No. 12, Jakarta Pusat</p>
+        </div>
+        <div class="hq-card hq-card--featured">
+          <div class="hq-img-wrap">
+            <img src="https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=300&q=80" alt="Bandung" />
+          </div>
+          <h3>Bandung</h3>
+          <p>Jl. Braga No. 7, Bandung</p>
+        </div>
+        <div class="hq-card">
+          <div class="hq-img-wrap">
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=300&q=80" alt="Surabaya" />
+          </div>
+          <h3>Surabaya</h3>
+          <p>Jl. Pemuda No. 35, Surabaya</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MESSAGE US SECTION -->
+  <section class="message-section" id="message">
+    <div class="container">
+      <h2 class="section-title">Message Us</h2>
+      <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+      <div class="message-layout">
+        <!-- FORM -->
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Nama" />
+            <span class="error-msg" id="namaError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" />
+            <span class="error-msg" id="phoneError"></span>
+          </div>
+          <div class="form-group">
+            <label for="tanggalLahir">Tanggal Lahir</label>
+            <input type="date" id="tanggalLahir" name="tanggalLahir" />
+            <span class="error-msg" id="tanggalError"></span>
+          </div>
+          <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="gender" value="Laki-Laki" checked /> Laki-Laki</label>
+              <label class="radio-label"><input type="radio" name="gender" value="Perempuan" /> Perempuan</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Pesan" rows="4"></textarea>
+            <span class="error-msg" id="pesanError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit</button>
+        </form>
+
+        <!-- RESULT CARD -->
+        <div class="result-card" id="resultCard">
+          <div class="result-empty">
+            <div class="result-icon">✉</div>
+            <p>Your submission will appear here after you submit the form.</p>
+          </div>
+          <div class="result-content" id="resultContent" style="display:none;">
+            <div class="result-header">
+              <span class="result-badge">Submitted</span>
+              <span id="resultTime" class="result-time"></span>
+            </div>
+            <div class="result-body">
+              <div class="result-row"><span class="result-label">Nama</span><span id="rNama"></span></div>
+              <div class="result-row"><span class="result-label">Email</span><span id="rEmail"></span></div>
+              <div class="result-row"><span class="result-label">Phone</span><span id="rPhone"></span></div>
+              <div class="result-row"><span class="result-label">Tanggal Lahir</span><span id="rTanggal"></span></div>
+              <div class="result-row"><span class="result-label">Jenis Kelamin</span><span id="rGender"></span></div>
+              <div class="result-row result-row--full"><span class="result-label">Pesan</span><span id="rPesan"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Moyomarmoyo. All rights reserved.</span>
+      <span>Created By Moyomarmoyo</span>
+    </div>
+  </footer>
+
+  <!-- NAME MODAL -->
+  <div class="modal-overlay" id="nameModal">
+    <div class="modal">
+      <div class="modal-icon">👋</div>
+      <h2>Welcome!</h2>
+      <p>What's your name?</p>
+      <input type="text" id="nameInput" placeholder="Enter your name..." />
+      <button class="btn btn-primary" id="nameSubmit">Enter Site</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
